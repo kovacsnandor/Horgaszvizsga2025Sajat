@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->Integer('id')->autoIncrement();
-            $table->string('FejezetCim', 50);
-            $table->string('KepFile', 50)->default(Null);
-            $table->string('TilalmiIdoszak', 50)->default(Null);
-            $table->Integer('MeretKorlat')->default(Null);
-            $table->boolean('DarabKorlatos')->default(Null);
-            $table->string('Foghatosag', 50)->default(Null);
-            $table->text('SzovegHtml')->default(Null);
+            $table->string('FejezetCim', 250);
+            $table->string('KepFile', 50)->default(Null)->nullable();
+            $table->string('TilalmiIdoszak', 50)->default(Null)->nullable();
+            $table->Integer('MeretKorlat')->default(Null)->nullable();
+            $table->boolean('DarabKorlatos')->default(Null)->nullable();
+            $table->string('Foghatosag', 50)->default(Null)->nullable();
+            $table->text('SzovegHtml')->default(Null)->nullable();
             $table->timestamps();
         });
     }

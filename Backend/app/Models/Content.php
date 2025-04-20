@@ -9,4 +9,13 @@ class Content extends Model
 {
     /** @use HasFactory<\Database\Factories\ContentFactory> */
     use HasFactory;
+
+    public $timestamps = true;
+
+    protected function casts(): array
+    {
+        return [
+            'DarabKorlatos' => 'boolean'                    
+        ];
+    }
 }
