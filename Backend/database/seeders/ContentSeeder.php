@@ -28,7 +28,7 @@ class ContentSeeder extends Seeder
                         'TilalmiIdoszak' => $row[3] === 'null' ? null : $row[3],
                         'MeretKorlat' => $row[4] === 'null' ? null : $row[4],
                         'DarabKorlatos' => $row[5] === 'null' ? null : $row[5],
-                        'Foghatosag' => $row[6] === 'null' ? null : $row[6],
+                        'FoghatosagId' => $row[6] === 'null' ? null : $row[6],
                         'SzovegHtml' => $row[7] === 'null' ? null : $row[7],
                     ];
                 }

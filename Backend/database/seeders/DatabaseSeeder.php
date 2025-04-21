@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
     //         'email' => 'test@example.com',
     //     ]);
     DB::statement('DELETE FROM contents');
+    DB::statement('DELETE FROM catchability_scents');
     $this->call([
+        CatchabilityScentSeeder::class,
         ContentSeeder::class
     ]);   
 
