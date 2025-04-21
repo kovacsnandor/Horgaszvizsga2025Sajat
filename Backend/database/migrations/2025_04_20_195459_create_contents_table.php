@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('TilalmiIdoszak', 50)->default(Null)->nullable();
             $table->Integer('MeretKorlat')->default(Null)->nullable();
             $table->boolean('DarabKorlatos')->default(Null)->nullable();
-            $table->string('Foghatosag', 50)->default(Null)->nullable();
+            $table->Integer('FoghatosagId')->default(Null)->nullable();
             $table->text('SzovegHtml')->default(Null)->nullable();
             $table->timestamps();
         });
