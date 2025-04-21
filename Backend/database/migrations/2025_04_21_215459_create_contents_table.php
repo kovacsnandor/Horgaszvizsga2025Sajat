@@ -19,6 +19,7 @@ return new class extends Migration
             $table->Integer('MeretKorlat')->default(Null)->nullable();
             $table->boolean('DarabKorlatos')->default(Null)->nullable();
             $table->Integer('FoghatosagId')->default(Null)->nullable();
+            $table->foreign('FoghatosagId')->references('id')->on('catchability_scents');
             $table->text('SzovegHtml')->default(Null)->nullable();
             $table->timestamps();
         });
