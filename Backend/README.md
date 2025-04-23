@@ -31,3 +31,11 @@ vagy
 2. A laravel elinditása (`php artisan serve`) után
     - Mingráció futtatása: `php artisan migrate`
     - Seeder futtatása: `php artisan db:seed`
+
+# Endpointok
+
+## request.rest
+A request.rest fájlban megtalálhatja az elkészítendő endpointokat, és leírásukat.
+Készítse el ezeket, majd kézi teszteléssel próbálja ki őket.
+
+

@@ -1,0 +1,31 @@
+### változók
+@protocol = http://
+@hostname = localhost
+@port = 8000
+@host = {{protocol}}{{hostname}}:{{port}}
+
+### get /api/horgaszvizsgaTananyag
+### A contents és catchability_scents táblák összes mezője
+### Felhasználás: A "Horgászvizsga tananyag" menüponthoz
+GET {{host}}/api/horgaszvizsgaTananyag
+
+### get halkartyak
+### A contents és catchability_scents táblák összes mezője, de csak a halkártyák
+### Szűrés: Halkártya az a sor, amihez kép van.
+### Rendezés: Halak neve szerint növekvő
+### Felhasználás: A "Halkártyák" menüponthoz
+GET {{host}}/api/halkartyak
+
+### get /api/halkartyak/id
+### A contents és catchability_scents táblák összes mezője
+### Szűrés: A content tábla id-je alapján csak egy rekord
+### Felhasználás: A "Halkártyák" menüpontban egy hal leírásának megjelenítéséhez
+GET {{host}}/api/halkartyak/23
+
+### get /api/halkartyakGyakorlo
+### A contents tábla csak halakat tartalmazó rekordjai, de csak a hal neve és képe mezők
+### Szűrés: Halkártya az a sor, amihez kép van.
+### Rendezés: Halak neve szerint növekvő
+### Felhasználás: A "Halismeret gyakorló" menüpont kártyáihoz
+GET {{host}}/api/halkartyakGyakorlo
+
