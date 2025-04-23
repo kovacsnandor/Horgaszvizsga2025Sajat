@@ -68,13 +68,13 @@ A request.rest fájlban megtalálhatja az elkészítendő endpointokat, és leí
 1. Készítse el `Backned/database/csv/horgaszvizsga.sql` fájlba az endpointok alapjául szolgáló **sql lekérdező parancsokat**.
     - horgaszvizsgaTananyag
     - halkartyak
-    - halkartyak/id
+    - halkartyaById/id
     - halkartyakGyakorlo
 
 2. `Backned/routes/api.php` **endpointok** elkészítése
     - get /api/horgaszvizsgaTananyag
     - get halkartyak
-    - get /api/halkartyak/id
+    - get /api/halkartyaById/id
     - get /api/halkartyakGyakorlo
 
 **Help** (endpoint szerkezet példa):
