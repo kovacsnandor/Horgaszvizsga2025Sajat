@@ -8,6 +8,10 @@ use App\Http\Requests\UpdateContentRequest;
 
 class ContentController extends Controller
 {
+
+
+
+    
     /**
      * Display a listing of the resource.
      */

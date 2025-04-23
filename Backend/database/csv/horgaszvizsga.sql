@@ -1,5 +1,18 @@
 select * from contents;
 select * from catchability_scents;
 
-# Elkészítendõ lekérdezések
-#
+
+# SQL lekÃ©rdezÃ©sek a feladathoz
+
+# horgaszvizsgaTananyag
+
+
+# halkartyak
+
+
+# halkartyak/id
+
+
+# halkartyakGyakorlo
+
+

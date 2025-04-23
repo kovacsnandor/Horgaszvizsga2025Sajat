@@ -1,3 +1,27 @@
+# Környezet telepítés
+
+## Frontend
+vite: `npm create vue@latest`
+
+npm frissítése
+`npm install -g npm@11.3.0`
+
+bootstrap: `npm i bootstrap@5.3.5`
+icons: `npm i bootstrap-icons`
+axios: `npm install axios`
+node_moduls: `npm install`
+`main.js`-ben (import bootstrap, icons):
+```js
+//main.js
+//Bootstrap: css, js
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap"
+//Icons: css
+import "bootstrap-icons/font/bootstrap-icons.min.css"
+``
+
+
+
 # Az adatbázis
 Az adatbázis a horgászvizsga tananyagát tartalmazó két táblás adatbázis kicsit leegyszerűsített formában.
 
@@ -21,6 +45,8 @@ A táblák angol elnevezése mellett az egyes és többesszám, a mezők magyar 
 - **id**: Azonosító
 - **Foghatosag**: A foghatósági szabály neve
 
+# Backend
+A backendet (REST API kiszolgáló) egy előre telepített, a `Backend` könytárban  található laravel segítségével készítse el.
 
 # Az adatbázis elkészítése
 A mysql szerver elindítása után (xampp)
@@ -36,6 +62,46 @@ vagy
 
 ## request.rest
 A request.rest fájlban megtalálhatja az elkészítendő endpointokat, és leírásukat.
-Készítse el ezeket, majd kézi teszteléssel próbálja ki őket.
 
+## Feladatok
 
+1. Készítse el `Backned/database/csv/horgaszvizsga.sql` fájlba az endpointok alapjául szolgáló **sql lekérdező parancsokat**.
+    - horgaszvizsgaTananyag
+    - halkartyak
+    - halkartyak/id
+    - halkartyakGyakorlo
+
+2. `Backned/routes/api.php` **endpointok** elkészítése
+    - get /api/horgaszvizsgaTananyag
+    - get halkartyak
+    - get /api/halkartyak/id
+    - get /api/halkartyakGyakorlo
+
+**Help** (endpoint szerkezet példa):
+```php
+Route::get('eroforras/{parameter}', [ControllerOsztaly::class, 'contolerFuggveny']);
+```
+
+3. Az endpointokhoz tartozó **kontroller függvények** elkészítése.
+A kontroller függvényeket a `Backend/app/Http/Controllers/ContentController.php` osztályba készítse el.
+
+**Help** (kontroller szerkezet példa)
+```php
+class ControllerOsztaly extends Controller
+{
+    //...
+
+    public function contolerFuggveny($parameter){
+
+        $query = 'SELECT  * ...';
+        $rows= DB::select($query, [$parameter]);
+        $data = [
+            'message' => 'ok',
+            'data' => $rows
+        ];
+
+        return response()->json($data, options:JSON_UNESCAPED_UNICODE);
+    }
+     //...
+}
+˛˛˛˛
