@@ -128,3 +128,25 @@ class ControllerOsztaly extends Controller
     }
      //...
 }
+```
+
+# Frontend
+
+## Helper
+src/helper/baseUrl.js
+
+```js
+const BASE_URL = 'http://localhost:8000/api';
+
+export {
+    BASE_URL,
+}
+```
+
+# Reszponzivitás
+## Tananyag
+Képek:
+    - clearfix
+    - float, sm felett félénél,  alatt pedig kitölti a szélességet
+    - dinamikus alt
+

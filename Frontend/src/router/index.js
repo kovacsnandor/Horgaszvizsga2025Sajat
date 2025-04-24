@@ -15,6 +15,12 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
       meta: {title: 'About'}
     },
+    {
+      path: '/horgaszvizsgaTananyag',
+      name: 'horgaszvizsgaTananyag',
+      component: () => import('../views/TananyagView.vue'),
+      meta: {title: 'Tananyag'}
+    },
   ],
 })
 

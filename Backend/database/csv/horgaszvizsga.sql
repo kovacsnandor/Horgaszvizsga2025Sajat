@@ -2,7 +2,7 @@ SELECT * FROM contents;
 SELECT * FROM catchability_scents;
 
 
-# SQL lekï¿½rdezï¿½sek a feladathoz
+# SQL lekérdezések a feladathoz
 
 # horgaszvizsgaTananyag
 SELECT co.*, ca.Foghatosag FROM contents co

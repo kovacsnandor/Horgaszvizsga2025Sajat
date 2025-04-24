@@ -36,7 +36,7 @@
                 Horgászvizsga
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Horgászvizsga tananyag</a></li>
+                <li><router-link class="dropdown-item" to="/horgaszvizsgaTananyag">Horgászvizsga tananyag</router-link></li>
                 <li><a class="dropdown-item" href="#">Halkártyák</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
@@ -51,8 +51,9 @@
               type="search"
               placeholder="Search"
               aria-label="Search"
+              v-model="searchWord"
             />
-            <button class="btn btn-outline-success" type="button">
+            <button class="btn btn-outline-success" type="button" @click="onClickSearchButton()">
               Search
             </button>
           </div>
@@ -63,7 +64,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      searchWord: null
+    }
+  },
+  onClickSearchButton(){
+    
+  }
+};
 </script>
 
 <style>
