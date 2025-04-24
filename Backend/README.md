@@ -83,7 +83,31 @@ Route::get('eroforras/{parameter}', [ControllerOsztaly::class, 'contolerFuggveny
 ```
 
 3. Az endpointokhoz tartozó **kontroller függvények** elkészítése.
-A kontroller függvényeket a `Backend/app/Http/Controllers/ContentController.php` osztályba készítse el.
+A kontroller függvényeket a `Backend/app/Http/Controllers/ContentController.php` osztályba készítse el úgy, hogy a hibákat is kezelje. 
+Json válasz minta:
+```json
+{
+    "message": "ok",
+    "data": [
+        {
+        "id": 18,
+        "FejezetCim": "Angolna",
+        "KepFile": "Angolna.jpg"
+        },
+    
+        ...
+    ]
+}  
+```
+
+Hiba esetén:
+```json
+{
+  "message": "Server error",
+  "data": []
+}
+```
+
 
 **Help** (kontroller szerkezet példa)
 ```php
@@ -104,4 +128,3 @@ class ControllerOsztaly extends Controller
     }
      //...
 }
-˛˛˛˛
