@@ -26,6 +26,7 @@
           data-bs-parent="#accordionFlushExample"
         >
           <div class="accordion-body clearfix">
+            
             <!-- Foghatósági infók -->
             <ul v-if="row.KepFile">
               <li>Tilalmi időszak: {{ info(row.TilalmiIdoszak) }}</li>
@@ -63,10 +64,10 @@ export default {
     };
   },
   mounted() {
-    this.getHorgaszvizsgaTananyag();
+    this.getRows();
   },
   methods: {
-    async getHorgaszvizsgaTananyag() {
+    async getRows() {
       try {
         const url = `${BASE_URL}/horgaszvizsgaTananyag`;
         const response = await axios.get(url);
@@ -81,7 +82,7 @@ export default {
     },
 
     keresJelol(text) {
-      if (this.searchStore.searchWord ) {
+      if (this.searchStore.searchWord) {
         let what = new RegExp(this.searchStore.searchWord, "gi");
         if (text != null) {
           text = text.replace(what, (match) => {
@@ -111,5 +112,4 @@ export default {
 </script>
 
 <style>
-
 </style>

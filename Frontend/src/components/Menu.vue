@@ -37,7 +37,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><router-link class="dropdown-item" to="/horgaszvizsgaTananyag">Horgászvizsga tananyag</router-link></li>
-                <li><a class="dropdown-item" href="#">Halkártyák</a></li>
+                <li><router-link class="dropdown-item" to="/halkartyak">Halkártyák</router-link></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                   <a class="dropdown-item" href="#">Halismeret gyakorló</a>

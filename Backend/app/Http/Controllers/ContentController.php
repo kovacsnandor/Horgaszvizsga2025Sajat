@@ -43,7 +43,7 @@ class ContentController extends Controller
         $query = '
             SELECT co.*, ca.Foghatosag FROM contents co
             LEFT JOIN catchability_scents ca on ca.id = co.FoghatosagId
-            WHERE co.id IS NOT NULL
+            WHERE co.KepFile IS NOT NULL
         ';
         try {
             //code...

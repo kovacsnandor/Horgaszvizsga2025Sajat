@@ -21,6 +21,12 @@ const router = createRouter({
       component: () => import('../views/TananyagView.vue'),
       meta: {title: 'Tananyag'}
     },
+    {
+      path: '/halkartyak',
+      name: 'halkartyak',
+      component: () => import('../views/HalkartyakView.vue'),
+      meta: {title: 'Halkártyák'}
+    },
   ],
 })
 

@@ -171,6 +171,9 @@ export const searchStore = defineStore("search", {
 
 ```
 
+# Képek
+Csupakisbetű javítás
+
 # Reszponzivitás
 ## Tananyag
 Képek:
