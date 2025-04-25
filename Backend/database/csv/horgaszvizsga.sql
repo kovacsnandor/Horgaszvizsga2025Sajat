@@ -22,3 +22,6 @@ SELECT * FROM contents co
 SELECT id, FejezetCim, KepFile FROM contents
   WHERE KepFile IS NOT NULL;
 
+SELECT * FROM contents
+  where FejezetCim = 'Csuka';
+

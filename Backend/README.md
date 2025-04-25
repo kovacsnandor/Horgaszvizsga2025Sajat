@@ -130,7 +130,20 @@ class ControllerOsztaly extends Controller
 }
 ```
 
-# Frontend
+# Frontend, amit bele kell még rakni
+
+assert/main.css
+```css
+@import './my.css';
+```
+
+assert/my.css
+```css
+.my-mark {
+    background-color: orange;
+    padding: 0;
+  }
+```
 
 ## Helper
 src/helper/baseUrl.js
@@ -143,10 +156,48 @@ export {
 }
 ```
 
+## Store
+stores/searchStore.js
+```js
+import { defineStore } from "pinia";
+
+export const searchStore = defineStore("search", {
+  //Ezek a változók
+  state: () => ({
+    searchWord: null,
+  })
+  
+});
+
+```
+
 # Reszponzivitás
 ## Tananyag
 Képek:
     - clearfix
     - float, sm felett félénél,  alatt pedig kitölti a szélességet
     - dinamikus alt
+
+## Import
+```js
+import { searchStore} from '@/stores/searchStore';
+```
+
+## Keresés
+```js
+keresJelol(text) {
+      const htmlTags = ['p', 'strong', 'ul', 'li']
+      if (this.searchStore.searchWord && !htmlTags.includes(this.searchStore.searchWord)) {
+        let what = new RegExp(this.searchStore.searchWord, "gi");
+        if (text != null) {
+          text = text.replace(what, (match) => {
+            return `<span class="my-mark">${match}</span>`;
+          });
+        }
+        return text;
+      } else {
+        return text;
+      }
+    },
+```
 

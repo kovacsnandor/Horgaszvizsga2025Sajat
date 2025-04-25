@@ -64,15 +64,27 @@
 </template>
 
 <script>
+import { searchStore} from '@/stores/searchStore';
 export default {
   data(){
     return {
-      searchWord: null
+      searchWord: null,
+      searchStore: searchStore()
     }
   },
-  onClickSearchButton(){
-    
-  }
+  watch: {
+    searchWord(data){
+      if (!data) {
+        this.searchStore.searchWord = null;
+      }
+    }
+  },
+  methods: {
+
+    onClickSearchButton(){
+      this.searchStore.searchWord = this.searchWord;
+    }
+  },
 };
 </script>
 
