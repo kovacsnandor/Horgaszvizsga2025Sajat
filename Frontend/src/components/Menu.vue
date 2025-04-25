@@ -40,7 +40,7 @@
                 <li><router-link class="dropdown-item" to="/halkartyak">Halkártyák</router-link></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Halismeret gyakorló</a>
+                  <router-link class="dropdown-item" to="/halkartyakGyakorlo">Halismeret gyakorló</router-link>
                 </li>
               </ul>
             </li>
