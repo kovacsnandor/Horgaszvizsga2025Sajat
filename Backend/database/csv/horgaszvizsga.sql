@@ -11,7 +11,7 @@ SELECT co.*, ca.Foghatosag FROM contents co
 # halkartyak
 SELECT co.*, ca.Foghatosag FROM contents co
   LEFT JOIN catchability_scents ca on ca.id = co.FoghatosagId
-  WHERE co.id IS NOT NULL;
+  WHERE co.KepFile IS NOT NULL;
 
 # halkartyaById/id
 SELECT * FROM contents co
