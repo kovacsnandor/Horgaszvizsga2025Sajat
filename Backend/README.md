@@ -186,18 +186,17 @@ import { searchStore} from '@/stores/searchStore';
 ## Keresés
 ```js
 keresJelol(text) {
-      const htmlTags = ['p', 'strong', 'ul', 'li']
-      if (this.searchStore.searchWord && !htmlTags.includes(this.searchStore.searchWord)) {
-        let what = new RegExp(this.searchStore.searchWord, "gi");
-        if (text != null) {
-          text = text.replace(what, (match) => {
-            return `<span class="my-mark">${match}</span>`;
-          });
-        }
-        return text;
-      } else {
-        return text;
-      }
-    },
+    if (this.searchStore.searchWord) {
+    let what = new RegExp(this.searchStore.searchWord, "gi");
+    if (text != null) {
+        text = text.replace(what, (match) => {
+        return `<span class="my-mark">${match}</span>`;
+        });
+    }
+    return text;
+    } else {
+    return text;
+    }
+},
 ```
 

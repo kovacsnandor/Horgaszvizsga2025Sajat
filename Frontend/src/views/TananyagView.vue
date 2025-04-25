@@ -81,8 +81,7 @@ export default {
     },
 
     keresJelol(text) {
-      const htmlTags = ['p', 'strong', 'ul', 'li']
-      if (this.searchStore.searchWord && !htmlTags.includes(this.searchStore.searchWord)) {
+      if (this.searchStore.searchWord ) {
         let what = new RegExp(this.searchStore.searchWord, "gi");
         if (text != null) {
           text = text.replace(what, (match) => {
