@@ -204,15 +204,4 @@ keresJelol(text) {
 ```
 
 # Problémák
-Frontend
-- databes/csv-ben van
-    - digaram nincs
-    - biztonsági mentés
-
-
-Backend
-- us-okat is oda kell adni    
-use Illuminate\Support\Facades\DB;
-
-use App\Http\Controllers\ContentController;
 
