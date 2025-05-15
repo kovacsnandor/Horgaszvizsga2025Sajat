@@ -10,7 +10,7 @@ select * from catchability_scents;
 # halkartyak
 
 
-# halkartyak/id
+# halkartyaById/id
 
 
 # halkartyakGyakorlo

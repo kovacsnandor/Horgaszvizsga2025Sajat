@@ -16,11 +16,11 @@ GET {{host}}/api/horgaszvizsgaTananyag
 ### Felhasználás: A "Halkártyák" menüponthoz
 GET {{host}}/api/halkartyak
 
-### get /api/halkartyak/id
+### get /api/halkartyaById/id
 ### A contents és catchability_scents táblák összes mezője
 ### Szűrés: A content tábla id-je alapján csak egy rekord
 ### Felhasználás: A "Halkártyák" menüpontban egy hal leírásának megjelenítéséhez
-GET {{host}}/api/halkartyak/23
+GET {{host}}/api/halkartyaById/23
 
 ### get /api/halkartyakGyakorlo
 ### A contents tábla csak halakat tartalmazó rekordjai, de csak a hal neve és képe mezők
